@@ -41,7 +41,7 @@ const quotesAndAuthors = [
     }
 ];
 
-export function getRandomInteger(array: Array<Object>) {
+export function getRandomInteger(array: Array<Object>): number {
     const length = array.length;
     const min = 0;
 
