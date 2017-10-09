@@ -19,8 +19,6 @@ html, body {
     background-color: black;
     height: 200px;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .quote-author {
@@ -36,7 +34,7 @@ html, body {
     background-color: #red; 
     border: none;
     color: black;
-    padding: 15px 32px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
