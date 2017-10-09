@@ -1,4 +1,4 @@
-const quotesAndAuthors = [
+var quotesAndAuthors = [
     {
         quote: "The best preparation for tomorrow is doing your best today.",
         authorName: "H. Jackson Brown Jr."
