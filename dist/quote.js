@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var quotesAndAuthors = [
     {
         quote: "The best preparation for tomorrow is doing your best today.",
@@ -40,3 +42,7 @@ var quotesAndAuthors = [
         authorName: "Maya Angelou"
     }
 ];
+function getRandomInteger(array) {
+    return "NOT IMPLEMENTED";
+}
+exports.getRandomInteger = getRandomInteger;

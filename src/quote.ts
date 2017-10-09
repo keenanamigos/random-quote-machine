@@ -40,3 +40,8 @@ const quotesAndAuthors = [
         authorName: "Maya Angelou"
     }
 ];
+
+export function getRandomInteger(array: Array<Object>) {
+    return "NOT IMPLEMENTED";
+}
+
