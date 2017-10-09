@@ -43,6 +43,8 @@ var quotesAndAuthors = [
     }
 ];
 function getRandomInteger(array) {
-    return "NOT IMPLEMENTED";
+    var length = array.length;
+    var min = 0;
+    return Math.floor(Math.random() * (length - min + 1)) + min; // 1 added to make maximum (length) inclusive
 }
 exports.getRandomInteger = getRandomInteger;
