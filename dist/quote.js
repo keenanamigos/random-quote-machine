@@ -26,3 +26,9 @@ function getRandomInteger(array) {
     return Math.floor(Math.random() * (length - min)) + min;
 }
 exports.getRandomInteger = getRandomInteger;
+function getRandomQuote(array) {
+    var index = getRandomInteger(array);
+    return array[index];
+}
+exports.getRandomQuote = getRandomQuote;
+// On button click, pass in quotesAndAuthors to getRandomQuote() function

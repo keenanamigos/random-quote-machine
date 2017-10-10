@@ -28,3 +28,10 @@ export function getRandomInteger(array: Array<Quote>): number {
     return Math.floor(Math.random() * (length - min)) + min;
 }
 
+export function getRandomQuote(array: Array<Quote>): Quote {
+    const index = getRandomInteger(array);
+    return array[index];
+}
+
+// On button click, pass in quotesAndAuthors to getRandomQuote() function
+
