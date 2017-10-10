@@ -4,8 +4,8 @@ export class Quote {
         this.author = author;
     }
 
-    private quote: string;
-    private author: string;
+    public quote: string;
+    public author: string;
  }
 
 const quotesAndAuthors = [
@@ -34,4 +34,20 @@ export function getRandomQuote(array: Array<Quote>): Quote {
 }
 
 // On button click, pass in quotesAndAuthors to getRandomQuote() function
+export function setQuoteObjectHTML(): any {
+    let quoteParagraph = document.getElementById("quote");
+    let quoteAuthor = document.getElementById("author");
 
+    const quote = getRandomQuote(quotesAndAuthors);
+    
+    quoteParagraph.innerHTML = `"${quote.quote}" `;
+    quoteAuthor.innerHTML = `- ${quote.author}`;
+}
+
+// Set initial Quote
+setQuoteObjectHTML();
+
+const newQuoteButton = document.getElementById("newQuote");
+newQuoteButton.onclick = function() {
+    setQuoteObjectHTML();
+}
