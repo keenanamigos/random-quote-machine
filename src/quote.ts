@@ -45,6 +45,6 @@ export function getRandomInteger(array: Array<Object>): number {
     const length = array.length;
     const min = 0;
 
-    return Math.floor(Math.random() * (length - min + 1)) + min; // 1 added to make maximum (length) inclusive
+    return Math.floor(Math.random() * (length - min)) + min;
 }
 
