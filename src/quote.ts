@@ -48,6 +48,6 @@ export function setQuoteObjectHTML(): any {
 setQuoteObjectHTML();
 
 const newQuoteButton = document.getElementById("newQuote");
-newQuoteButton.onclick = function() {
+newQuoteButton.onclick = () => {
     setQuoteObjectHTML();
 }
