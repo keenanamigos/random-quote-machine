@@ -36,7 +36,7 @@ describe("getRandomQuote", () => {
 
     it("should return an instance of the Quote class based on a random array index", () => {
         const arrayOfQuotes = [
-            new Quote({quote: "Some Quote 1", author: "Some Author 1"}),
+            new Quote({author: "Some Author 1", quote: "Some Quote 1"}),
             new Quote({quote: "Some Quote 2", author: "Some Author 2"}),
             new Quote({quote: "Some Quote 3", author: "Some Author 3"})
         ];
