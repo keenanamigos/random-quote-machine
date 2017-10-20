@@ -2,7 +2,7 @@ export class Quote {
     public quote: string;
     public author: string;
 
-    constructor(args: {quote: string, author?: string}) {
+    public constructor(args: {quote: string, author?: string}) {
         ({
             quote: this.quote,
             author: this.author
@@ -21,7 +21,8 @@ const quotesAndAuthors = [
     new Quote({author: "Audrey Hepburn", quote: "Nothing is impossible, the word itself says \'i'm possible\'!"}),
     new Quote({quote: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.", author: "Helen Keller"}),
     new Quote({quote: "A hero is someone who has given his or her life to something bigger than oneself.", author: "Joseph Campbell"}),
-    new Quote({author: "Maya Angelou", quote: "Try to be a rainbow in someone's cloud."})
+    new Quote({author: "Maya Angelou", quote: "Try to be a rainbow in someone's cloud."}),
+    new Quote({quote: "In the day, do the day's work."})
 ];
 
 export function getRandomInteger(array: Array<Quote>): number {
@@ -43,6 +44,11 @@ export function setQuoteObjectHTML(): void {
     const quote = getRandomQuote(quotesAndAuthors);
     
     quoteParagraph.innerHTML = `"${quote.quote}" `;
+
+    if (quote.author === undefined) {
+        quote.author = "Unattributed"
+    }
+    
     quoteAuthor.innerHTML = `- ${quote.author}`;
 }
 

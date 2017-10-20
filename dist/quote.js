@@ -87,7 +87,8 @@ var quotesAndAuthors = [
     new Quote({ author: "Audrey Hepburn", quote: "Nothing is impossible, the word itself says \'i'm possible\'!" }),
     new Quote({ quote: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.", author: "Helen Keller" }),
     new Quote({ quote: "A hero is someone who has given his or her life to something bigger than oneself.", author: "Joseph Campbell" }),
-    new Quote({ author: "Maya Angelou", quote: "Try to be a rainbow in someone's cloud." })
+    new Quote({ author: "Maya Angelou", quote: "Try to be a rainbow in someone's cloud." }),
+    new Quote({ quote: "In the day, do the day's work." })
 ];
 function getRandomInteger(array) {
     var length = array.length;
@@ -105,6 +106,9 @@ function setQuoteObjectHTML() {
     var quoteAuthor = document.getElementById("author");
     var quote = getRandomQuote(quotesAndAuthors);
     quoteParagraph.innerHTML = "\"" + quote.quote + "\" ";
+    if (quote.author === undefined) {
+        quote.author = "Unattributed";
+    }
     quoteAuthor.innerHTML = "- " + quote.author;
 }
 exports.setQuoteObjectHTML = setQuoteObjectHTML;
