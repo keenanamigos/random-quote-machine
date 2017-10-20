@@ -36,8 +36,7 @@ export function getRandomQuote(array: Array<Quote>): Quote {
     return array[index];
 }
 
-// On button click, pass in quotesAndAuthors to getRandomQuote() function
-export function setQuoteObjectHTML(): any {
+export function setQuoteObjectHTML(): void {
     let quoteParagraph = document.getElementById("quote");
     let quoteAuthor = document.getElementById("author");
 

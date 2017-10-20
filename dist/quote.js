@@ -100,7 +100,6 @@ function getRandomQuote(array) {
     return array[index];
 }
 exports.getRandomQuote = getRandomQuote;
-// On button click, pass in quotesAndAuthors to getRandomQuote() function
 function setQuoteObjectHTML() {
     var quoteParagraph = document.getElementById("quote");
     var quoteAuthor = document.getElementById("author");
