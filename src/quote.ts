@@ -46,7 +46,7 @@ export function setQuoteObjectHTML(): void {
     quoteParagraph.innerHTML = `"${quote.quote}" `;
 
     if (quote.author === undefined) {
-        quote.author = "Unattributed"
+        quote.author = "Unattributed";
     }
     
     quoteAuthor.innerHTML = `- ${quote.author}`;
