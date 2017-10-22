@@ -44,3 +44,25 @@ describe("getRandomQuote", () => {
         expect(getRandomQuote(arrayOfQuotes)).to.be.an.instanceof(Quote);
     });
 });
+
+describe("createNewQuote", () => {
+    const createNewQuote = require(quoteFilePath).createNewQuote;
+    const Quote = require(quoteFilePath).Quote;
+
+    it("should return an instance of the Quote class", () => {
+        const object = {
+            author: "Some person",
+            quote: "Some profound quote"
+        };
+
+        expect(createNewQuote(object)).to.be.an.instanceof(Quote);
+    });
+
+    it("should throw an error if the given object does not contain the quote property", () => {
+        const object = {
+            author: "Some person",
+        };
+
+        expect(createNewQuote.bind(createNewQuote, object)).to.throw(Error, "Missing the REQUIRED property 'quote': " + object);
+    });
+});

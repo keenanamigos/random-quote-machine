@@ -25,6 +25,14 @@ const quotesAndAuthors = [
     new Quote({quote: "In the day, do the day's work."})
 ];
 
+export function createNewQuote(object: {quote: string, author?: string}): Quote {
+    if (object.hasOwnProperty("quote")) {
+        return new Quote(object);
+    } else {
+        throw new Error(`Missing the REQUIRED property 'quote': ${object}`);
+    }
+}
+
 export function getRandomInteger(array: Array<Quote>): number {
     const length = array.length;
     const min = 0;
@@ -37,25 +45,25 @@ export function getRandomQuote(array: Array<Quote>): Quote {
     return array[index];
 }
 
-export function setQuoteObjectHTML(): void {
-    let quoteParagraph = document.getElementById("quote");
-    let quoteAuthor = document.getElementById("author");
+// export function setQuoteObjectHTML(): void {
+//     let quoteParagraph = document.getElementById("quote");
+//     let quoteAuthor = document.getElementById("author");
 
-    const quote = getRandomQuote(quotesAndAuthors);
+//     const quote = getRandomQuote(quotesAndAuthors);
     
-    quoteParagraph.innerHTML = `"${quote.quote}" `;
+//     quoteParagraph.innerHTML = `"${quote.quote}" `;
 
-    if (quote.author === undefined) {
-        quote.author = "Unattributed";
-    }
+//     if (quote.author === undefined) {
+//         quote.author = "Unattributed";
+//     }
     
-    quoteAuthor.innerHTML = `- ${quote.author}`;
-}
+//     quoteAuthor.innerHTML = `- ${quote.author}`;
+// }
 
-// Set initial Quote
-setQuoteObjectHTML();
+// // Set initial Quote
+// setQuoteObjectHTML();
 
-const newQuoteButton = document.getElementById("newQuote");
-newQuoteButton.onclick = () => {
-    setQuoteObjectHTML();
-}
+// const newQuoteButton = document.getElementById("newQuote");
+// newQuoteButton.onclick = () => {
+//     setQuoteObjectHTML();
+// }
