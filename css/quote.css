@@ -1,5 +1,5 @@
 body {
-    background-color: #00FA9A;
+    background-color: grey;
     margin: 0;
 }
 
@@ -8,6 +8,7 @@ html, body {
 }
 
 .quote-container {
+    margin-top: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,12 +25,14 @@ html, body {
 .quote-author {
     align-self: right;
     z-index: 1;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .quote-text {
     z-index: 1;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .tweet-button {
