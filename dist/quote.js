@@ -119,8 +119,15 @@ function setQuoteObjectHTML() {
         quote.author = "Unattributed";
     }
     quoteAuthor.innerHTML = "- " + quote.author;
+    setTweet(quoteParagraph.innerHTML, quoteAuthor.innerHTML);
 }
 exports.setQuoteObjectHTML = setQuoteObjectHTML;
+function setTweet(quote, author) {
+    var tweet = document.getElementById("tweetBtn");
+    // Ignore TypeScript error
+    tweet.href = "https://twitter.com/intent/tweet?&text=" + encodeURIComponent(quote + author);
+}
+exports.setTweet = setTweet;
 // Set initial Quote
 setQuoteObjectHTML();
 var newQuoteButton = document.getElementById("newQuote");

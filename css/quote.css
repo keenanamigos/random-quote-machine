@@ -24,10 +24,12 @@ html, body {
 .quote-author {
     align-self: right;
     z-index: 1;
+    font-size: 20px;
 }
 
 .quote-text {
     z-index: 1;
+    font-size: 20px;
 }
 
 .new-quote {
