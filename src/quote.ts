@@ -33,22 +33,22 @@ export function createNewQuote(object: {quote: string, author?: string}): Quote 
 }
 
 export function getRandomInteger(array: Array<Quote>): number {
-    const length = array.length;
-    const min = 0;
+    const length: number = array.length;
+    const min: number = 0;
 
     return Math.floor(Math.random() * (length - min)) + min;
 }
 
 export function getRandomQuote(array: Array<Quote>): Quote {
-    const index = getRandomInteger(array);
+    const index: number = getRandomInteger(array);
     return array[index];
 }
 
 export function setQuoteObjectHTML(): void {
-    let quoteParagraph = document.getElementById("quote");
-    let quoteAuthor = document.getElementById("author");
+    let quoteParagraph: HTMLElement = document.getElementById("quote");
+    let quoteAuthor: HTMLElement = document.getElementById("author");
 
-    const quote = getRandomQuote(quotesAndAuthors);
+    const quote: Quote = getRandomQuote(quotesAndAuthors);
     
     quoteParagraph.innerHTML = `"${quote.quote}" `;
 
@@ -61,15 +61,14 @@ export function setQuoteObjectHTML(): void {
 }
 
 export function setTweet(quote: string, author: string): void {
-    let tweet = document.getElementById("tweetBtn");
-    // Ignore TypeScript error
+    let tweet: HTMLAnchorElement = document.getElementsByTagName("a")[0];
     tweet.href=`https://twitter.com/intent/tweet?&text=${encodeURIComponent(quote + author)}`;
 }
 
 // Set initial Quote
 setQuoteObjectHTML();
 
-const newQuoteButton = document.getElementById("newQuote");
+const newQuoteButton: HTMLElement = document.getElementById("newQuote");
 newQuoteButton.onclick = () => {
     setQuoteObjectHTML();
 }

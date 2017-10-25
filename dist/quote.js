@@ -123,8 +123,7 @@ function setQuoteObjectHTML() {
 }
 exports.setQuoteObjectHTML = setQuoteObjectHTML;
 function setTweet(quote, author) {
-    var tweet = document.getElementById("tweetBtn");
-    // Ignore TypeScript error
+    var tweet = document.getElementsByTagName("a")[0];
     tweet.href = "https://twitter.com/intent/tweet?&text=" + encodeURIComponent(quote + author);
 }
 exports.setTweet = setTweet;
