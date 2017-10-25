@@ -10,7 +10,7 @@ export class Quote {
     }
  }
 
-let quotesAndAuthors = [
+export let quotesAndAuthors = [
     createNewQuote({quote: "The best preparation for tomorrow is doing your best today.", author: "H. Jackson Brown Jr."}),
     createNewQuote({quote: "My mission in life is not merely to survive, but to thrive; and to do so with some passion, some compassion, some humor, and some style.", author: "Maya Angelou"}),
     createNewQuote({quote: "I can't change the direction of the wind, but I can adjust my sails to always reach my destination.", author: "Jimmy Dean"}),
@@ -44,31 +44,3 @@ export function getRandomQuote(array: Array<Quote>): Quote {
     return array[index];
 }
 
-export function setQuoteObjectHTML(): void {
-    let quoteParagraph: HTMLElement = document.getElementById("quote");
-    let quoteAuthor: HTMLElement = document.getElementById("author");
-
-    const quote: Quote = getRandomQuote(quotesAndAuthors);
-    
-    quoteParagraph.innerHTML = `"${quote.quote}" `;
-
-    if (quote.author === undefined) {
-        quote.author = "Unattributed";
-    }
-    
-    quoteAuthor.innerHTML = `- ${quote.author}`;
-    setTweet(quoteParagraph.innerHTML, quoteAuthor.innerHTML);
-}
-
-export function setTweet(quote: string, author: string): void {
-    let tweet: HTMLAnchorElement = document.getElementsByTagName("a")[0];
-    tweet.href=`https://twitter.com/intent/tweet?&text=${encodeURIComponent(quote + author)}`;
-}
-
-// Set initial Quote
-setQuoteObjectHTML();
-
-const newQuoteButton: HTMLElement = document.getElementById("newQuote");
-newQuoteButton.onclick = () => {
-    setQuoteObjectHTML();
-}

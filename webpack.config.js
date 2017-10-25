@@ -1,7 +1,7 @@
 module.exports = {
-    entry: "./dist/quote.js",
+    entry: "./dist/main.js",
     output: {
-      filename: "./dist/quote.js"
+      filename: "./dist/main.js"
     },
     // watch: true
 };
