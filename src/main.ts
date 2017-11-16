@@ -1,6 +1,4 @@
-import { Quote } from "./quote";
-import { getRandomQuote } from "./quote";
-import { quotesAndAuthors } from "./quote";
+import { Quote, getRandomQuote, quotesAndAuthors } from "./quote";
 
 function setQuoteObjectHTML(): void {
     let quoteParagraph: HTMLElement = document.getElementById("quote");

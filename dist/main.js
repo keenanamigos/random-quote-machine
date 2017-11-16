@@ -60,11 +60,42 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var quote_1 = __webpack_require__(1);
+function setQuoteObjectHTML() {
+    var quoteParagraph = document.getElementById("quote");
+    var quoteAuthor = document.getElementById("author");
+    var quote = quote_1.getRandomQuote(quote_1.quotesAndAuthors);
+    quoteParagraph.innerHTML = "\"" + quote.quote + "\" ";
+    if (quote.author === undefined) {
+        quote.author = "Unattributed";
+    }
+    quoteAuthor.innerHTML = "- " + quote.author;
+    setTweet(quoteParagraph.innerHTML, quoteAuthor.innerHTML);
+}
+function setTweet(quote, author) {
+    var tweet = document.getElementsByTagName("a")[0];
+    tweet.href = "https://twitter.com/intent/tweet?&text=" + encodeURIComponent(quote + author);
+}
+// Set initial Quote
+setQuoteObjectHTML();
+var newQuoteButton = document.getElementById("newQuote");
+newQuoteButton.onclick = function () {
+    setQuoteObjectHTML();
+};
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103,44 +134,11 @@ function getRandomInteger(array) {
     var min = 0;
     return Math.floor(Math.random() * (length - min)) + min;
 }
-exports.getRandomInteger = getRandomInteger;
 function getRandomQuote(array) {
     var index = getRandomInteger(array);
     return array[index];
 }
 exports.getRandomQuote = getRandomQuote;
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var quote_1 = __webpack_require__(0);
-var quote_2 = __webpack_require__(0);
-function setQuoteObjectHTML() {
-    var quoteParagraph = document.getElementById("quote");
-    var quoteAuthor = document.getElementById("author");
-    var quote = quote_1.getRandomQuote(quote_2.quotesAndAuthors);
-    quoteParagraph.innerHTML = "\"" + quote.quote + "\" ";
-    if (quote.author === undefined) {
-        quote.author = "Unattributed";
-    }
-    quoteAuthor.innerHTML = "- " + quote.author;
-    setTweet(quoteParagraph.innerHTML, quoteAuthor.innerHTML);
-}
-function setTweet(quote, author) {
-    var tweet = document.getElementsByTagName("a")[0];
-    tweet.href = "https://twitter.com/intent/tweet?&text=" + encodeURIComponent(quote + author);
-}
-// Set initial Quote
-setQuoteObjectHTML();
-var newQuoteButton = document.getElementById("newQuote");
-newQuoteButton.onclick = function () {
-    setQuoteObjectHTML();
-};
 
 
 /***/ })

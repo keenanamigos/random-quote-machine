@@ -32,7 +32,7 @@ export let quotesAndAuthors = [
     Quote.create({quote: "In the day, do the day's work."})
 ];
 
-export function getRandomInteger(array: Array<Quote>): number {
+function getRandomInteger(array: Array<Quote>): number {
     const length: number = array.length;
     const min: number = 0;
 
