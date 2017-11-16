@@ -134,6 +134,7 @@ function getRandomInteger(array) {
     var min = 0;
     return Math.floor(Math.random() * (length - min)) + min;
 }
+exports.getRandomInteger = getRandomInteger;
 function getRandomQuote(array) {
     var index = getRandomInteger(array);
     return array[index];

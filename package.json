@@ -20,7 +20,8 @@
     "typings": "^2.1.1"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "mocha && gulp scripts && webpack"
   },
   "author": "keenan johnson",
   "license": "ISC"

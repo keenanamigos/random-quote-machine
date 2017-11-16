@@ -14,9 +14,9 @@ describe("getRandomInteger", () => {
 
     it("should return an integer between 0 and the length of the given array", () => {
         const arrayOfQuotes = [
-            new Quote({quote: "Some Quote 1", author: "Some Author 1"}),
-            new Quote({quote: "Some Quote 2", author: "Some Author 2"}),
-            new Quote({quote: "Some Quote 3", author: "Some Author 3"})
+            Quote.create({quote: "Some Quote 1", author: "Some Author 1"}),
+            Quote.create({quote: "Some Quote 2", author: "Some Author 2"}),
+            Quote.create({quote: "Some Quote 3", author: "Some Author 3"})
         ];
 
         let arrayOfIntegers = [];
@@ -36,9 +36,9 @@ describe("getRandomQuote", () => {
 
     it("should return an instance of the Quote class based on a random array index", () => {
         const arrayOfQuotes = [
-            new Quote({author: "Some Author 1", quote: "Some Quote 1"}),
-            new Quote({quote: "Some Quote 2", author: "Some Author 2"}),
-            new Quote({quote: "Some Quote 3", author: "Some Author 3"})
+            Quote.create({author: "Some Author 1", quote: "Some Quote 1"}),
+            Quote.create({quote: "Some Quote 2", author: "Some Author 2"}),
+            Quote.create({quote: "Some Quote 3", author: "Some Author 3"})
         ];
 
         expect(getRandomQuote(arrayOfQuotes)).to.be.an.instanceof(Quote);
