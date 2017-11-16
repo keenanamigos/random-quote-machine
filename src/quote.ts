@@ -8,6 +8,14 @@ export class Quote {
             author: this.author
         } = args);
     }
+
+    static create(object: {quote: string, author?: string}): Quote {
+        if (object.hasOwnProperty("quote")) {
+            return new Quote(object);
+        } else {
+            throw new Error(`Missing the REQUIRED property 'quote': ${object}`);
+        }
+    }
  }
 
 export let quotesAndAuthors = [

@@ -4,6 +4,14 @@ var Quote = /** @class */ (function () {
     function Quote(args) {
         (this.quote = args.quote, this.author = args.author);
     }
+    Quote.create = function (object) {
+        if (object.hasOwnProperty("quote")) {
+            return new Quote(object);
+        }
+        else {
+            throw new Error("Missing the REQUIRED property 'quote': " + object);
+        }
+    };
     return Quote;
 }());
 exports.Quote = Quote;
