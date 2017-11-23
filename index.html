@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Random Quote Machine</title>
+    <head>
+        <title>Random Quote Machine</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/quote.css" rel="stylesheet" type"text/css">
-</head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="css/quote.css" rel="stylesheet" type"text/css">
+    </head>
 
-<body>
-    <div class="quote-container">
-        <div class="quote-box">
-            <p id="quote" class="quote-text" style="color: red;"></p> 
-            <p id="author" class="quote-author" style="color: red;"></p>
-            <button id="newQuote" type="button" class="new-quote">New Quote</button>
-            <a id="tweetBtn" class="tweet-button" target="_blank" rel="noopener noreferrer">Tweet</a>
-        </div>
-    </div>
+    <body>
+        <main>
+            <div class="quote-container">
+                <div class="quote-box">
+                    <p id="quote" class="quote-text" style="color: red;"></p> 
+                    <p id="author" class="quote-author" style="color: red;"></p>
+                    <button id="newQuote" type="button" class="new-quote">New Quote</button>
+                    <a id="tweetBtn" class="tweet-button" target="_blank" rel="noopener noreferrer">Tweet</a>
+                </div>
+            </div>
+        </main>
 
-    <!-- SCRIPTS -->
-    <script src="dist/main.js" type="text/javascript"></script>
-</body>
+        <!-- SCRIPTS -->
+        <script src="dist/main.js" type="text/javascript"></script>
+    </body>
 </html>
