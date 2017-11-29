@@ -18,7 +18,8 @@ function setQuoteObjectHTML(): void {
 
 function setTweet(quote: string, author: string): void {
     const tweet: HTMLAnchorElement = document.getElementsByTagName("a")[0];
-    tweet.href = `https://twitter.com/intent/tweet?&text=${encodeURIComponent(quote + author)}`;
+    const encodedURI = encodeURIComponent(quote + author);
+    tweet.href = `https://twitter.com/intent/tweet?&text=${encodedURI}`;
 }
 
 // Set initial Quote

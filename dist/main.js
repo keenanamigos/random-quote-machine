@@ -84,7 +84,8 @@ function setQuoteObjectHTML() {
 }
 function setTweet(quote, author) {
     var tweet = document.getElementsByTagName("a")[0];
-    tweet.href = "https://twitter.com/intent/tweet?&text=" + encodeURIComponent(quote + author);
+    var encodedURI = encodeURIComponent(quote + author);
+    tweet.href = "https://twitter.com/intent/tweet?&text=" + encodedURI;
 }
 // Set initial Quote
 setQuoteObjectHTML();
