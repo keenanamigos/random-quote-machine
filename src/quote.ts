@@ -34,7 +34,7 @@ export let quotesAndAuthors: Quote[] = [
 
 export function getRandomInteger(array: Quote[]): number {
     const length: number = array.length;
-    const min: number = 0;
+    const min = 0;
 
     return Math.floor(Math.random() * (length - min)) + min;
 }
