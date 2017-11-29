@@ -9,14 +9,14 @@ export class Quote {
         } = args);
     }
 
-    static create(object: {quote: string, author?: string}): Quote {
+    public static create(object: {quote: string, author?: string}): Quote {
         if (object.hasOwnProperty("quote")) {
             return new Quote(object);
         } else {
             throw new Error(`Missing the REQUIRED property 'quote': ${object}`);
         }
     }
- }
+}
 
 export let quotesAndAuthors = [
     Quote.create({quote: "The best preparation for tomorrow is doing your best today.", author: "H. Jackson Brown Jr."}),
@@ -32,15 +32,14 @@ export let quotesAndAuthors = [
     Quote.create({quote: "In the day, do the day's work."})
 ];
 
-export function getRandomInteger(array: Array<Quote>): number {
+export function getRandomInteger(array: Quote[]): number {
     const length: number = array.length;
     const min: number = 0;
 
     return Math.floor(Math.random() * (length - min)) + min;
 }
 
-export function getRandomQuote(array: Array<Quote>): Quote {
+export function getRandomQuote(array: Quote[]): Quote {
     const index: number = getRandomInteger(array);
     return array[index];
 }
-

@@ -6,9 +6,6 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "jshint": "^2.9.4"
-  },
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
@@ -17,12 +14,18 @@
     "gulp-typescript": "^3.2.2",
     "mocha": "^4.0.1",
     "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "tslint-eslint-rules": "^4.1.1",
     "typings": "^2.1.1"
   },
   "scripts": {
     "test": "mocha",
-    "build": "mocha && gulp scripts && webpack"
+    "build": "tslint -c tslint.json src/*.ts && mocha && gulp scripts && webpack",
+    "lint": "tslint -c tslint.json src/*.ts"
   },
   "author": "keenan johnson",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^2.6.2"
+  }
 }
