@@ -18,7 +18,7 @@ export class Quote {
     }
 }
 
-export let quotesAndAuthors = [
+export let quotesAndAuthors: Quote[] = [
     Quote.create({quote: "The best preparation for tomorrow is doing your best today.", author: "H. Jackson Brown Jr."}),
     Quote.create({quote: "My mission in life is not merely to survive, but to thrive; and to do so with some passion, some compassion, some humor, and some style.", author: "Maya Angelou"}),
     Quote.create({quote: "I can't change the direction of the wind, but I can adjust my sails to always reach my destination.", author: "Jimmy Dean"}),
