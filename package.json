@@ -19,9 +19,9 @@
     "typings": "^2.1.1"
   },
   "scripts": {
-    "test": "mocha",
-    "build": "tslint -c tslint.json src/*.ts && mocha && gulp scripts && webpack",
-    "lint": "tslint -c tslint.json src/*.ts"
+    "test": "./node_modules/.bin/mocha --compilers ts:ts-node/register ./test/*.ts",
+    "build": "tslint -c tslint.json src/*.ts test/*.ts && ./node_modules/.bin/mocha --compilers ts:ts-node/register ./test/*.spec.ts && gulp scripts && webpack",
+    "lint": "tslint -c tslint.json src/*.ts test/*.ts"
   },
   "author": "keenan johnson",
   "license": "ISC",
