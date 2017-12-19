@@ -26,14 +26,14 @@ html, body {
     z-index: 1;
     font-size: 16px;
     font-weight: 700;
-    color: red;
+    color: #FFC7C7;
 }
 
 .quote-text {
     z-index: 1;
     font-size: 16px;
     font-weight: 700;
-    color: red;
+    color: #FFC7C7;
 }
 
 .tweet-button {
@@ -41,7 +41,7 @@ html, body {
     background-color: transparent;
     border: 2px solid red;
     border-radius: 0.6em;
-    color: #3498db;
+    color: #BBDBF7;
     cursor: pointer;
     display: flex;
     align-self: center;
@@ -62,7 +62,7 @@ html, body {
     background-color: transparent;
     border: 2px solid red;
     border-radius: 0.6em;
-    color: #e74c3c;
+    color: #FFC7C7;
     cursor: pointer;
     display: flex;
     align-self: center;
