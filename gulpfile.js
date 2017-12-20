@@ -15,7 +15,7 @@ gulp.task("scripts", () => {
 
 gulp.task("styles", () => {
   const sassResult = gulp.src("sass/**/*.scss")
-  .pipe(sass().on("error"), sass.logError);
+  .pipe(sass().on("error", sass.logError));
 
   return sassResult.pipe(gulp.dest("./css/"));
 });

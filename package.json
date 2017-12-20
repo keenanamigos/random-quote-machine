@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --compilers ts:ts-node/register ./test/*.ts",
-    "build": "tslint -c tslint.json src/*.ts test/*.ts && ./node_modules/.bin/mocha --compilers ts:ts-node/register ./test/*.spec.ts && gulp scripts && webpack",
+    "build": "tslint -c tslint.json src/*.ts test/*.ts && ./node_modules/.bin/mocha --compilers ts:ts-node/register ./test/*.spec.ts && gulp scripts && gulp styles && webpack",
     "lint": "tslint -c tslint.json src/*.ts test/*.ts"
   },
   "author": "keenan johnson",

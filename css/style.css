@@ -1,0 +1,71 @@
+body {
+  background-color: grey;
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+.quote-container {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.quote-box {
+  opacity: 0.5;
+  background-color: black;
+  height: 200px;
+  display: flex; }
+
+.quote-author {
+  align-self: right;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFC7C7; }
+
+.quote-text {
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFC7C7; }
+
+.tweet-button {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 0.6em;
+  color: #BBDBF7;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  margin: auto 8px 8px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; }
+
+.new-quote {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 0.6em;
+  color: #FFC7C7;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  margin: auto 8px 8px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; }
