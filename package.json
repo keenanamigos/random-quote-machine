@@ -20,8 +20,8 @@
     "typings": "^2.1.1"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --compilers ts:ts-node/register ./test/*.ts",
-    "build": "tslint -c tslint.json src/*.ts test/*.ts && ./node_modules/.bin/mocha --compilers ts:ts-node/register ./test/*.spec.ts && gulp scripts && gulp styles && webpack",
+    "test": "./node_modules/.bin/mocha --compilers ts:ts-node/register ./test/*.spec.ts",
+    "build": "npm run lint && npm run test && gulp scripts && gulp styles && webpack",
     "lint": "tslint -c tslint.json src/*.ts test/*.ts"
   },
   "author": "keenan johnson",
