@@ -1,2 +1,4 @@
 <h1>Free Code Camp: Random Quote Generator Project</h1>
-<p>Main goal of the project was to get more familiar with Gulp, TypeScript, and Webpack</p>
+<p>Project Specs: https://www.freecodecamp.org/challenges/build-a-random-quote-machine</p>
+<p>Technologies Used: HTML, CSS, SASS, TypeScript, JavaScript, TSLint, Gulp, Webpack, npm</p>
+<p>Testing Tools: Mocha/Chai (unit testing), aXe (accessibility testing)</p>
